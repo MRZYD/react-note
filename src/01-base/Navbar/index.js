@@ -1,5 +1,5 @@
 import React from "react";
-
+import propTypes from 'prop-types'
 
 class App extends React.Component {
   state = {
@@ -18,6 +18,11 @@ class App extends React.Component {
     )
   }
 
+}
+
+App.propTypes = {
+  title: propTypes.string,
+  leftshow: propTypes.bool,
 }
 
 export default App;
