@@ -6,6 +6,17 @@ class App extends React.Component {
     //只能内部自己使用，外部不可以使用
   }
 
+  //类属性 验证
+  static propTypes = {
+    title: propTypes.string,
+    leftshow: propTypes.bool,
+  }
+
+  //默认值
+  static defaultProps = {
+    leftshow: true,
+  }
+
   //属性是父组件传子组件的参数，通过this.props传参
   render() {
     return (
@@ -18,11 +29,6 @@ class App extends React.Component {
     )
   }
 
-}
-
-App.propTypes = {
-  title: propTypes.string,
-  leftshow: propTypes.bool,
 }
 
 export default App;

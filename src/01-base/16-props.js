@@ -3,6 +3,10 @@ import Navbar from  "./Navbar/index"
 
 class App extends React.Component {
   render() {
+    let obj = {
+      title: '测试',
+      leftshow: false,
+    }
     return (
       <div>
         <div>
@@ -16,6 +20,10 @@ class App extends React.Component {
         <div>
           <h2>我的</h2>
           <Navbar title="我的" leftshow={true} rightshow={false}></Navbar>
+
+          <Navbar title={obj.title} leftshow={obj.leftshow}></Navbar>
+          <Navbar {...obj}></Navbar>
+
         </div>
       </div>
     )

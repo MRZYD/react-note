@@ -1,5 +1,5 @@
 import React from "react";
-
+import propTypes from 'prop-types'
 
 function Sidebar(props) {
   console.log(props)
@@ -23,6 +23,16 @@ function Sidebar(props) {
     </div>
   )
 
+}
+
+//属性校验
+Sidebar.propTypes = {
+  bg: propTypes.string,
+}
+
+//默认值
+Sidebar.defaultProps = {
+  bg: 'red',
 }
 
 export default Sidebar;
